@@ -2,26 +2,26 @@
 
 $posts = [
   [
-    'title' => 'Some U.S title 1', 
-    'content' => 'Some U.S content 1', 
+    'title' => 'Some tech title 1', 
+    'content' => 'Some tech content 1', 
     'date' => 'January 1, 2021', 
     'author' => 'Pets'
     ],
     [
-    'title' => 'Some U.S title 2', 
-    'content' => 'Some U.S content 2', 
+    'title' => 'Some tech title 2', 
+    'content' => 'Some tech content 2', 
     'date' => 'January 2, 2021', 
     'author' => 'Alex'
     ],
     [
-    'title' => 'Some U.S title 3', 
-    'content' => 'Some U.S content 3', 
+    'title' => 'Some tech title 3', 
+    'content' => 'Some tech content 3', 
     'date' => 'January 3, 2021', 
     'author' => 'Juss'
     ],
     [
-    'title' => 'Some U.S title 4', 
-    'content' => 'Some U.S content 4', 
+    'title' => 'Some tech title 4', 
+    'content' => 'Some tech content 4', 
     'date' => 'January 4, 2021', 
     'author' => 'Ron'
     ],
