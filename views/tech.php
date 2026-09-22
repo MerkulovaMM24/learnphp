@@ -1,5 +1,5 @@
 <?php
-
+$title = 'Technology';
 $posts = [
   [
     'title' => 'Some tech title 1', 
