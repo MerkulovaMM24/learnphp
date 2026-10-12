@@ -16,44 +16,19 @@ class PublicController
         view('index', compact('title', 'articles'));
     }
 
+    public function tech()
+{
+    $articles = Article::all();
+    $title = 'Tech';
+    view('tech', compact('title', 'articles'));
+}
+
     public function us()
     {
         $articles = Article::all();
         dump($articles);
         $title = 'U.S';
         view('us', compact('title', 'articles'));
-    }
-
-    public function tech()
-    {
-        $title = 'Technology';
-        $posts = [
-            [
-                'title' => 'Some tech title 1',
-                'content' => 'Some tech content 1',
-                'date' => 'January 1, 2021',
-                'author' => 'Pets',
-            ],
-            [
-                'title' => 'Some tech title 2',
-                'content' => 'Some tech content 2',
-                'date' => 'January 2, 2021',
-                'author' => 'Juss',
-            ],
-            [
-                'title' => 'Some tech title 3',
-                'content' => 'Some tech content 3',
-                'date' => 'January 3, 2021',
-                'author' => 'Alex',
-            ],
-            [
-                'title' => 'Some tech title 4',
-                'content' => 'Some tech content 4',
-                'date' => 'January 4, 2021',
-                'author' => 'Manivald',
-            ],
-        ];
-        view('tech', compact('title', 'posts'));
     }
 
     public function forms() 
