@@ -1,0 +1,19 @@
+{
+    "name": "60712127084/learnphp",
+    "type": "project",
+    "license": "WTFPL",
+    "autoload": {
+        "psr-4": {
+            "App\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Alissia Merkulova",
+            "email": "alissia.merkulova@tptlive.ee"
+        }
+    ],
+    "require": {
+        "symfony/var-dumper": "^8.1"
+    }
+}
