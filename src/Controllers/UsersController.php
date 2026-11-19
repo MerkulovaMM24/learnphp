@@ -39,7 +39,7 @@ class UsersController
         }
     }
 
-    public function update()
+        public function update()
     {
         $user = User::find($_GET['id'] ?? null);
 
@@ -49,18 +49,36 @@ class UsersController
             return;
         }
 
-        $user->name = trim($_POST['name'] ?? '');
-        $user->email = trim($_POST['email'] ?? '');
+        $name = trim($_POST['name'] ?? '');
+        $email = trim($_POST['email'] ?? '');
+        $password = $_POST['password'] ?? '';
 
-        // Password is optional when editing a user.
-        if (!empty($_POST['password'])) {
-            $user->password = password_hash($_POST['password'], PASSWORD_BCRYPT);
+        if ($name === '' || $email === '') {
+            http_response_code(422);
+            echo 'Name and email are required';
+            return;
+        }
+
+        if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
+            http_response_code(422);
+            echo 'Invalid email address';
+            return;
+        }
+
+        $user->name = $name;
+        $user->email = $email;
+
+        if ($password !== '') {
+            $user->password = password_hash($password, PASSWORD_BCRYPT);
         }
 
         $user->save();
+
         redirect('/admin/users');
+        return;
     }
-    
+
+
     public function delete()
     {
         $user = User::find($_GET['id'] ?? null);
