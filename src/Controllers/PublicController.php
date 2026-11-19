@@ -19,14 +19,13 @@ class PublicController
     public function tech()
 {
     $articles = Article::all();
-    $title = 'Tech';
+    $title = 'Technology';
     view('tech', compact('title', 'articles'));
 }
 
     public function us()
     {
         $articles = Article::all();
-        dump($articles);
         $title = 'U.S';
         view('us', compact('title', 'articles'));
     }
