@@ -60,7 +60,7 @@ class UsersController
         $user->save();
         redirect('/admin/users');
     }
-
+    
     public function delete()
     {
         $user = User::find($_GET['id'] ?? null);
@@ -68,9 +68,11 @@ class UsersController
         if ($user) {
             $user->delete();
             redirect('/admin/users');
+            return;
         }
 
         http_response_code(404);
         echo '404';
     }
+
 }
